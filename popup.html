@@ -1,0 +1,244 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="popup.css">
+    <title>Coding Train Pop Up</title>
+</head>
+<body>
+    <div class="container">
+        <video controls width="800" height="600">
+            <source src="sketch/the_vid.webm" type="video/webm">
+           
+        </video>
+    </div>
+    <script src="sketch.js"></script>
+</body>
+</html> -->
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="popup.css">
+    <title>Coding Train Pop Up</title>
+</head>
+<body>
+    <div class="container">
+        <video controls width="800" height="600" id="videoPlayer">
+            <source src="sketch/the_vid.webm" type="video/webm">
+        </video>
+        <button id="openInNewTab">Open in New Tab</button>
+    </div>
+    <script src="sketch.js"></script>
+    <script>
+        document.getElementById('openInNewTab').addEventListener('click', function() {
+            // Get the video source
+            var videoSrc = document.getElementById('videoPlayer').getAttribute('src');
+
+            // Open the video in a new tab
+            window.open(videoSrc, '_blank');
+        });
+    </script>
+</body>
+</html> -->
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="popup.css">
+    <title>Coding Train Pop Up</title>
+</head>
+<body>
+    <div class="container">
+        <video controls width="800" height="600" id="myVideo">
+            <source src="sketch/the_vid.webm" type="video/webm">
+        </video>
+        <button onclick="openVideoInNewTab()">Open in New Tab</button>
+    </div>
+    <script src="sketch.js"></script>
+    <script>
+        function openVideoInNewTab() {
+            // Get the video source URL
+            var videoSource = document.getElementById('myVideo').src;
+
+            // Open the video in a new tab
+            window.open(videoSource, '_blank');
+        }
+    </script>
+</body>
+</html>
+
+ -->
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="popup.css">
+    <title>Coding Train Pop Up</title>
+</head>
+<body>
+    <div class="container">
+        <video controls width="800" height="600" id="myVideo">
+            <source src="sketch/the_vid.webm" type="video/webm">
+        </video>
+        <button onclick="openVideoInNewTab()">Open in New Tab</button>
+    </div>
+    <script src="sketch.js"></script>
+
+    <script>
+        function openVideoInNewTab() {
+            var videoUrl = document.getElementById('myVideo').getAttribute('src');
+            window.open(videoUrl, '_blank');
+        }
+    </script>
+</body>
+</html> -->
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="popup.css">
+    <title>Coding Train Pop Up</title>
+</head>
+<body>
+    <div class="container">
+        <video controls width="800" height="600" class="video">
+            <source src="sketch/the_vid.webm" type="video/webm">
+        </video>
+        <button id="openInNewTab">Open in New Tab</button>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const video = document.querySelector('.video');
+            const openInNewTabButton = document.getElementById('openInNewTab');
+
+            openInNewTabButton.addEventListener('click', function () {
+                // Get the video source URL
+                const videoSource = video.querySelector('source').getAttribute('src');
+
+                // Open the video in a new tab
+                window.open(videoSource, '_blank');
+            });
+        });
+    </script>
+</body>
+</html>
+ -->
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   
+
+    //Include the dynamically generated nonce value in the CSP policy 
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'wasm-unsafe-eval' 'inline-speculation-rules' http://localhost:* http://127.0.0.1:* 'nonce-<?php echo $nonceValue; ?>'">
+
+    <link rel="stylesheet" href="popup.css">
+    <title>Coding Train Pop Up</title>
+</head>
+<body>
+    <div class="container">
+        <video controls width="800" height="600" class="video">
+            <source src="sketch/the_vid.webm" type="video/webm">
+        </video>
+        // Include the dynamically generated nonce value in the script tag
+        <button id="openInNewTab">Open in New Tab</button>
+    </div>
+
+    <script nonce="<?php echo $nonceValue; ?>">
+        document.addEventListener('DOMContentLoaded', function () {
+            const video = document.querySelector('.video');
+            const openInNewTabButton = document.getElementById('openInNewTab');
+
+            openInNewTabButton.addEventListener('click', function () {
+                // Get the video source URL
+                const videoSource = video.querySelector('source').getAttribute('src');
+
+                // Open the video in a new tab
+                window.open(videoSource, '_blank');
+            });
+        });
+    </script>
+</body>
+</html>
+ -->
+
+
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+     <!-- Include the dynamically generated nonce value in the CSP policy -->
+     <meta http-equiv="Content-Security-Policy" id="csp-meta">
+ 
+     <link rel="stylesheet" href="popup.css">
+     <title>Coding Train Pop Up</title>
+ </head>
+ <body>
+     <div class="container">
+         <div class="video-container">
+         <video controls width="800" height="600" class="video">
+             <source src="sketch/the_vid.webm" type="video/webm">
+         </video>
+        </div>
+         <!-- Include the dynamically generated nonce value in the script tag -->
+         <!-- <button id="openInNewTab">Open in New Tab</button> -->
+         <div class="button-container">
+            <button id="openInNewTab">Open in New Tab</button>
+        </div>
+     </div>
+ 
+     <!-- Include the external script -->
+     <script src="sketch1.js" nonce="dynamicNonce"></script>
+ 
+     <script>
+         // Fallback for browsers that do not support the crypto API
+         if (!crypto) {
+             document.getElementById('csp-meta').setAttribute('content', "script-src 'self' 'unsafe-inline'");
+         }
+     </script>
+ </body>
+ </html>
+ 
+ <!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="popup.css">
+    <title>Coding Train Pop Up</title>
+</head>
+<body>
+    <div class="container">
+        <video controls width="800" height="600">
+            <source src="sketch/the_vid.webm" type="video/webm">
+           
+        </video>
+    </div>
+    <script src="sketch.js"></script>
+</body>
+</html> -->
